@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import Index from "../pages/Index"
 import Show from "../pages/Show"
 
@@ -15,8 +15,8 @@ const Main = (props) => {
     };
 
     const createArtists = async (artist) => {
-        await fetch(URL, + IdleDeadline, {
-            method: "PUT",
+        await fetch(URL, {
+            method: "POST",
             headers: {
                 "Content-Type": "Application/json",
             },
@@ -37,7 +37,7 @@ const Main = (props) => {
     }
 
     const deleteArtist = async id => {
-        await fetch(URL+ id, { method: "DELETE" });
+        await fetch(URL + id, { method: "DELETE" });
         getArtists();
     }
 
@@ -47,7 +47,7 @@ const Main = (props) => {
         <main>
             <Switch>
                 <Route exact path="/">
-                    <Index artists={artists}/>
+                    <Index artists={artists} createArtists={createArtists} />
                 </Route>
                 <Route
                 path="/artists/:id"

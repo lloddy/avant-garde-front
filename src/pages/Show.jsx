@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const Show = (props) => {
 
@@ -16,7 +16,7 @@ const Show = (props) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        props.updateArtists(editForm, artist._id)
+        props.updateArtist(editForm, artist._id)
         props.history.push("/");
     };
 
