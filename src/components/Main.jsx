@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 import Index from "../pages/Index"
 import Show from "../pages/Show"
+import Create from "../pages/Create"
 
 const Main = (props) => {
     const [ artists, setArtists ] = useState([])
@@ -47,23 +48,27 @@ const Main = (props) => {
         <main>
             <Switch>
                 <Route exact path="/">
-                    <Index artists={artists} createArtists={createArtists} />
+                    <Index artists={artists} />
                 </Route>
                 <Route
-                path="/artists/:id"
-                render={(rp) => (
-                    artists.length ?
-                        <Show
-                        artists={artists}
-                        updateArtist={updateArtist}
-                        deleteArtist={deleteArtist}
-                        {...rp}
-                        />
-                    :
-                    <Redirect to="/" />
-                )}
-
+                    path="/artists/:id"
+                    render={(rp) => (
+                        artists.length ?
+                            <Show
+                            artists={artists}
+                            updateArtist={updateArtist}
+                            deleteArtist={deleteArtist}
+                            {...rp}
+                            />
+                        :
+                        <Redirect to="/" />
+                    )}
                 />
+                <Route 
+                    path="/create"
+                    >
+                    <Create createArtists={createArtists}/>   
+                </Route>
             </Switch>
         </main>
     )
