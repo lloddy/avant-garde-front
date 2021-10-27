@@ -1,13 +1,31 @@
+$mainColor: #1857a4;
+$contrastColor: rgba(255, 255, 255, 0.877);
+
+$mainFont: 'Helvitica';
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@mixin white-text-blue-bg {
+  color: $contrastColor;
+  background-color: $mainColor;
+}
+
+@mixin blue-text-white-bg {
+  color: $mainColor;
+  background-color: $contrastColor;
+}
+
+.nav {
+  font-family: $mainFont;
+  display: flex;
+  background-color: $mainColor;
+  text-decoration: none;
+
+  h1 {
+    margin-left: 20px;
+    color: $contrastColor;
+    font-size: 1.75rem;
+  }
 }
