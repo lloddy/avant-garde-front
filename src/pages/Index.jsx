@@ -7,7 +7,7 @@ const Index = (props) => {
             <div key={personalbar._id} className="artist">
                 <Link to={`/artists/${artist._id}`}>
                     <h1>
-                        {artist.className}
+                        {artist.name}
                     </h1>
                 </Link>
                 <img src={artist.image} alt={artist.name} className="image" />
