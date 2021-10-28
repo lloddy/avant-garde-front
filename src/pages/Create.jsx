@@ -1,8 +1,10 @@
-import { Link } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import { useState } from 'react';
 
-const Create = (props) => {
 
+
+const Create = (props) => {
+    const history = useHistory();
     const [ newForm, setNewForm ] = useState({
         name: "",
         birth: "",
@@ -29,7 +31,7 @@ const Create = (props) => {
             bio: "",
             era: "",
         });
-        // props.history.push("/");
+        history.push("/");
     };
 
     

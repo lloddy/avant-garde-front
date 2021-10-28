@@ -29,3 +29,18 @@ body {
     font-size: 1.75rem;
   }
 }
+.artist {
+  font-family: $mainFont;
+}
+
+#mainImage {
+  width: 400px;
+}
+
+.showArtist {
+  display: flex;
+  font-family: $mainFont;
+  flex-direction: column;
+  margin-left: 20px;
+  text-align: left;
+}

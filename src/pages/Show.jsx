@@ -26,15 +26,12 @@ const Show = (props) => {
     };
 
     return (
-        <div className="artist">
+        <div className="showArtist">
             <h1>{artist.name}</h1>
-            <img src={artist.image} alt={artist.name} />
+            <img src={artist.image} alt={artist.name} id="mainImage"/>
             <h3>{artist.birth}-{artist.death}</h3>
-            <h3>{artist.era}</h3>
+            <h3>Movement/Era: {artist.era}</h3>
             <p>{artist.bio}</p>
-            <button id="delete" onClick={removeArtist}>
-                DELETE
-            </button>
             <form onSubmit={handleSubmit}>
                 <input
                     type="text"
@@ -80,6 +77,9 @@ const Show = (props) => {
                 />
                 <input type="submit" value="Update Artist" />
             </form>
+            <button id="delete" onClick={removeArtist}>
+                DELETE
+            </button>
         </div>
     )
 };
