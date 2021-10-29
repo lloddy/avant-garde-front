@@ -1,5 +1,7 @@
 import { useState } from "react";
 import backgroundImageShow from '../assets/image5.jpeg'
+import defaultImage from '../assets/default.jpeg'
+
 
 const Show = (props) => {
 
@@ -7,6 +9,9 @@ const Show = (props) => {
     const artists = props.artists;
     const artist = artists.find((a) => a._id === id);
     const [editForm, setEditForm] = useState(artist);
+    const addDefualtImage = (event) => {
+        event.target.src = defaultImage
+    }
 
     const handleChange = (event) => {
         setEditForm((prevState) => ({
@@ -36,6 +41,18 @@ const Show = (props) => {
             <h3>{artist.birth}-{artist.death}</h3>
             <h3>Movement/Era: {artist.era}</h3>
             <p>{artist.bio}</p>
+            <div className="imageDiv">
+                <img src={artist.image1} alt={artist.image2.default} id="bodyImages"/>
+                <img src={artist.image2} alt={artist.image2.default} id="bodyImages"/>
+                <img src={artist.image3} alt={artist.image3.default} id="bodyImages"/>
+                <img src={artist.image4} alt={artist.image4.default} id="bodyImages"/>
+                <img src={artist.image5} alt={artist.image5.default} id="bodyImages"/>
+                {/* <img src={artist.image6} alt={artist.image6.default} id="bodyImages"/>
+                <img src={artist.image7} alt={artist.image7.default} id="bodyImages"/>
+                <img src={artist.image8} alt={artist.image8.default} id="bodyImages"/>
+                <img src={artist.image9} alt={artist.image9.default} id="bodyImages"/>
+                <img src={artist.image10} alt={artist.image10.default} id="bodyImages"/> */}
+            </div>
             <form id="editForm" onSubmit={handleSubmit}>
                 <input
                     type="text"
