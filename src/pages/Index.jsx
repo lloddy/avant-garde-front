@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react';
+import backgroundImageIndex from '../assets/image1.jpeg'
 
 const Index = (props) => {
 
@@ -7,11 +8,11 @@ const Index = (props) => {
         return props.artists.map((artist) => (
             <div key={artist._id} className="artist">
                 <Link to={`/artists/${artist._id}`}>
-                    <h1>
+                    <h1 className="artistName">
                         {artist.name}
                     </h1>
+                <img src={artist.image} alt={artist.name} className="indexImage" />
                 </Link>
-                <img src={artist.image} alt={artist.name} className="image" />
             </div>
         ))
     }    
@@ -20,7 +21,9 @@ const Index = (props) => {
     }
 
     return (
-        <div>
+        <div className="artist"
+            style={{ backgroundImage: `url(${backgroundImageIndex})`}}
+        >
             {props.artists ? loaded() : loading()}
         </div>
     )

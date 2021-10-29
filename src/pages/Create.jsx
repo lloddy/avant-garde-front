@@ -1,5 +1,6 @@
 import { useHistory } from 'react-router-dom'
 import { useState } from 'react';
+import backgroundImageCreate from '../assets/image8.jpeg'
 
 
 
@@ -36,52 +37,60 @@ const Create = (props) => {
 
     
     return (
-        <div>
+        <div style={{ backgroundImage: `url(${backgroundImageCreate})`}}>
             <section>
-            <form onSubmit={handleSubmit} className="Form">
-                <input
-                    type="text"
-                    value={newForm.name}
-                    name="name"
-                    placeholder="Name"
-                    onChange={handleChange}
-                />
-                <input
-                    type="text"
-                    value={newForm.birth}
-                    name="birth"
-                    placeholder="Date of Birth"
-                    onChange={handleChange}
-                />
-                <input
-                    type="text"
-                    value={newForm.death}
-                    name="death"
-                    placeholder="Date of Death"
-                    onChange={handleChange}
-                />
-                <input
-                    type="url"
-                    value={newForm.image}
-                    name="image"
-                    placeholder="Image URL"
-                    onChange={handleChange}
-                />
-                <input
-                    type="text"
-                    value={newForm.era}
-                    name="era"
-                    placeholder="Era/Movement"
-                    onChange={handleChange}
-                />
-                <input
-                    type="textarea"
-                    value={newForm.bio}
-                    name="bio"
-                    placeholder="Bio"
-                    onChange={handleChange}
-                />
-                <input type="submit" value="Create Artist" />
+            <form onSubmit={handleSubmit} >
+                <div className="newForm">
+                    <input 
+                        id="createInput"
+                        type="text"
+                        value={newForm.name}
+                        name="name"
+                        placeholder="Name"
+                        onChange={handleChange}
+                    />
+                    <input
+                        id="createInput"
+                        type="text"
+                        value={newForm.birth}
+                        name="birth"
+                        placeholder="Date of Birth"
+                        onChange={handleChange}
+                    />
+                    <input
+                        id="createInput"
+                        type="text"
+                        value={newForm.death}
+                        name="death"
+                        placeholder="Date of Death"
+                        onChange={handleChange}
+                    />
+                    <input
+                        id="createInput"
+                        type="url"
+                        value={newForm.image}
+                        name="image"
+                        placeholder="Image URL"
+                        onChange={handleChange}
+                    />
+                    <input
+                        id="createInput"
+                        type="text"
+                        value={newForm.era}
+                        name="era"
+                        placeholder="Era/Movement"
+                        onChange={handleChange}
+                    />
+                    <textarea
+                        id="createInputTextArea"
+                        type="textarea"
+                        value={newForm.bio}
+                        name="bio"
+                        placeholder="Bio"
+                        onChange={handleChange}
+                    />
+                </div>
+                <input type="submit" value="Create Artist" className="submit"/>
             </form>
         </section>
     </div>

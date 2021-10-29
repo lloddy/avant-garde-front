@@ -1,4 +1,5 @@
 import { useState } from "react";
+import backgroundImageShow from '../assets/image5.jpeg'
 
 const Show = (props) => {
 
@@ -26,13 +27,16 @@ const Show = (props) => {
     };
 
     return (
-        <div className="showArtist">
+        <div 
+            className="showArtist"
+            style={{ backgroundImage: `url(${backgroundImageShow})`}}
+        >
             <h1>{artist.name}</h1>
             <img src={artist.image} alt={artist.name} id="mainImage"/>
             <h3>{artist.birth}-{artist.death}</h3>
             <h3>Movement/Era: {artist.era}</h3>
             <p>{artist.bio}</p>
-            <form onSubmit={handleSubmit}>
+            <form id="editForm" onSubmit={handleSubmit}>
                 <input
                     type="text"
                     value={editForm.name}
@@ -69,7 +73,7 @@ const Show = (props) => {
                     onChange={handleChange}
                 />
                 <input
-                    type="textarea"
+                    type="text"
                     value={editForm.bio}
                     name="bio"
                     placeholder="Bio"
