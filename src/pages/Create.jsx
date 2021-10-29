@@ -13,6 +13,11 @@ const Create = (props) => {
         image: "",
         bio: "",
         era: "",
+        image1: "",
+        image2: "",
+        image3: "",
+        image4: "",
+        image5: ""
     });
 
     const handleChange = (event) => {
@@ -70,7 +75,7 @@ const Create = (props) => {
                         type="url"
                         value={newForm.image}
                         name="image"
-                        placeholder="Image URL"
+                        placeholder="Profile Image"
                         onChange={handleChange}
                     />
                     <input
@@ -87,6 +92,46 @@ const Create = (props) => {
                         value={newForm.bio}
                         name="bio"
                         placeholder="Bio"
+                        onChange={handleChange}
+                    />
+                    <input
+                        id="createInput"
+                        type="url"
+                        value={newForm.image1}
+                        name="image1"
+                        placeholder="Add an image of their work."
+                        onChange={handleChange}
+                    />
+                    <input
+                        id="createInput"
+                        type="url"
+                        value={newForm.image2}
+                        name="image2"
+                        placeholder="Add an image of their work."
+                        onChange={handleChange}
+                    />
+                    <input
+                        id="createInput"
+                        type="url"
+                        value={newForm.image3}
+                        name="image3"
+                        placeholder="Add an image of their work."
+                        onChange={handleChange}
+                    />
+                    <input
+                        id="createInput"
+                        type="url"
+                        value={newForm.image4}
+                        name="image4"
+                        placeholder="Add an image of their work."
+                        onChange={handleChange}
+                    />
+                    <input
+                        id="createInput"
+                        type="url"
+                        value={newForm.image5}
+                        name="image5"
+                        placeholder="Add an image of their work."
                         onChange={handleChange}
                     />
                 </div>
