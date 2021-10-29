@@ -3,7 +3,7 @@
 }
 
 $mainColor: #6500a8;
-$contrastColor: rgba(255, 255, 255, 0.877);
+$contrastColor: rgb(228, 227, 227);
 
 $mainFont: 'Helvetica';
 
@@ -55,7 +55,7 @@ body {
 .imageDiv {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  justify-content: space-evenly;
   #bodyImages {
   width: 200px;
   }
@@ -67,10 +67,12 @@ body {
   flex-direction: column;
   padding-left: 20px;
   text-align: left;
+
 }
 
 .indexImage {
   max-width: 400px;
+  max-height: 400px;
   border-style: solid;
   border-width: 5px;
   border-color: $mainColor;
@@ -99,7 +101,6 @@ body {
     margin: 10px;
     border-radius: 15px;
     font-size: 18px;
-    
   }
   #createInputTextArea {
     width: 400px;
@@ -111,20 +112,56 @@ body {
     text-decoration: none;
   }
 } 
-  .submit {
-    @include white-text-blue-bg;
-    width: 400px;
-    height: 50px;
-    border: none;
-    text-decoration: none;
-    border-radius: 15px;
-    font-size: 24px;
-    &:hover {
-      @include blue-text-white-bg;
-    }
+.submit {
+  @include white-text-blue-bg;
+  width: 400px;
+  height: 50px;
+  border: none;
+  text-decoration: none;
+  border-radius: 15px;
+  font-size: 24px;
+  &:hover {
+    @include blue-text-white-bg;
   }
+}
 
-  
+.showArtistInfo {
+  background-color: rgba(255, 255, 255, .9);
+  padding: 10px;
+  width: fit-content;
+  border-radius: 0 0 20px 0; 
+}
 
+#editForm {
+  margin-top: 50px;
+  h2 {
+    margin-bottom: 30px;
+  }
+}
+
+.editLabels {
+  background-color: $contrastColor;
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 0 15px 0 0;
+}
+
+.editEntry {
+  display: flex;
+  border-style: solid;
+  border-color: $contrastColor;
+  border-width: 5px;
+  width: 400px;
+  height: 50px;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 0 15px 15px 0;
+  font-size: 18px;
+}
+
+#editImages {
+  margin-bottom: -10px;
+  border-radius: 0;
+}
 
 

@@ -36,11 +36,11 @@ const Show = (props) => {
             className="showArtist"
             style={{ backgroundImage: `url(${backgroundImageShow})`}}
         >
-            <h1>{artist.name}</h1>
+            <h1 className="showArtistInfo">{artist.name}</h1>
             <img src={artist.image} alt={artist.name} id="mainImage"/>
-            <h3>{artist.birth}-{artist.death}</h3>
-            <h3>Movement/Era: {artist.era}</h3>
-            <p>{artist.bio}</p>
+            <h3 className="showArtistInfo">{artist.birth}-{artist.death}</h3>
+            <h3 className="showArtistInfo">Movement/Era: {artist.era}</h3>
+            <p className="showArtistInfo">{artist.bio}</p>
             <div className="imageDiv">
                 <img src={artist.image1} alt={artist.image2.default} id="bodyImages"/>
                 <img src={artist.image2} alt={artist.image2.default} id="bodyImages"/>
@@ -53,50 +53,117 @@ const Show = (props) => {
                 <img src={artist.image9} alt={artist.image9.default} id="bodyImages"/>
                 <img src={artist.image10} alt={artist.image10.default} id="bodyImages"/> */}
             </div>
-            <form id="editForm" onSubmit={handleSubmit}>
-                <input
-                    type="text"
-                    value={editForm.name}
-                    name="name"
-                    placeholder="Name"
-                    onChange={handleChange}
-                />
-                <input
-                    type="text"
-                    value={editForm.birth}
-                    name="birth"
-                    placeholder="Date of Birth"
-                    onChange={handleChange}
-                />
-                <input
-                    type="text"
-                    value={editForm.death}
-                    name="death"
-                    placeholder="Date of Death"
-                    onChange={handleChange}
-                />
-                <input
-                    type="url"
-                    value={editForm.image}
-                    name="image"
-                    placeholder="Image URL"
-                    onChange={handleChange}
-                />
-                <input
-                    type="text"
-                    value={editForm.era}
-                    name="era"
-                    placeholder="Era/Movement"
-                    onChange={handleChange}
-                />
-                <input
-                    type="text"
-                    value={editForm.bio}
-                    name="bio"
-                    placeholder="Bio"
-                    onChange={handleChange}
-                />
-                <input type="submit" value="Update Artist" />
+            <form onSubmit={handleSubmit}>
+                <div id="editForm">
+                    <h2 className="showArtistInfo">EDIT THIS ARTIST</h2>
+                    <label className="editLabels" for="editName">NAME</label><br />
+                    <input
+                        id="editName"
+                        className="editEntry"
+                        type="text"
+                        value={editForm.name}
+                        name="name"
+                        placeholder="Name"
+                        onChange={handleChange}
+                    /><br />
+                    <label className="editLabels" for="editBirth">BIRTH</label><br />
+                    <input
+                        id="editBirth"
+                        className="editEntry"
+                        type="text"
+                        value={editForm.birth}
+                        name="birth"
+                        placeholder="Date of Birth"
+                        onChange={handleChange}
+                    /><br />
+                    <label className="editLabels" for="editDeath">DEATH</label><br />
+                    <input
+                        id="editDeath"
+                        className="editEntry"
+                        type="text"
+                        value={editForm.death}
+                        name="death"
+                        placeholder="Date of Death"
+                        onChange={handleChange}
+                    /><br />
+                    <label className="editLabels" for="editProImage">PROFILE IMAGE</label><br />
+                    <input
+                        id="editProImage"
+                        className="editEntry"
+                        type="url"
+                        value={editForm.image}
+                        name="image"
+                        placeholder="Image URL"
+                        onChange={handleChange}
+                    /><br />
+                    <label className="editLabels" for="editEra">ERA/MOVEMENT</label><br />
+                    <input
+                        id="editEra"
+                        className="editEntry"
+                        type="text"
+                        value={editForm.era}
+                        name="era"
+                        placeholder="Era/Movement"
+                        onChange={handleChange}
+                    /><br />
+                    <label className="editLabels" for="editBio">BIO</label><br />
+                    <textarea
+                        id="editBio"
+                        className="editEntry"
+                        type="text"
+                        value={editForm.bio}
+                        name="bio"
+                        placeholder="Bio"
+                        onChange={handleChange}
+                    /><br />
+                    <label className="editLabels" for="editimages">CHANGE IMAGES</label><br />
+                    <input
+                        id="editImages"
+                        className="editEntry"
+                        type="url"
+                        value={editForm.image1}
+                        name="image1"
+                        placeholder="Add an image of their work."
+                        onChange={handleChange}
+                    />
+                    <input
+                        id="editImages"
+                        className="editEntry"
+                        type="url"
+                        value={editForm.image2}
+                        name="image2"
+                        placeholder="Add an image of their work."
+                        onChange={handleChange}
+                    />
+                    <input
+                        id="editImages"
+                        className="editEntry"
+                        type="url"
+                        value={editForm.image3}
+                        name="image3"
+                        placeholder="Add an image of their work."
+                        onChange={handleChange}
+                    />
+                    <input
+                        id="editImages"
+                        className="editEntry"
+                        type="url"
+                        value={editForm.image4}
+                        name="image4"
+                        placeholder="Add an image of their work."
+                        onChange={handleChange}
+                    />
+                    <input
+                        id="editImages"
+                        className="editEntry"
+                        type="url"
+                        value={editForm.image5}
+                        name="image5"
+                        placeholder="Add an image of their work."
+                        onChange={handleChange}
+                    />
+                    <input type="submit" value="Update Artist" id="updateButton"/>
+                </div>
             </form>
             <button id="delete" onClick={removeArtist}>
                 DELETE
