@@ -1,7 +1,5 @@
 import { useState } from "react";
 import backgroundImageShow from '../assets/image5.jpeg'
-import defaultImage from '../assets/default.jpeg'
-
 
 const Show = (props) => {
 
@@ -9,9 +7,7 @@ const Show = (props) => {
     const artists = props.artists;
     const artist = artists.find((a) => a._id === id);
     const [editForm, setEditForm] = useState(artist);
-    const addDefualtImage = (event) => {
-        event.target.src = defaultImage
-    }
+    const [bigImage, setBigImage] = useState(artist.image1)
 
     const handleChange = (event) => {
         setEditForm((prevState) => ({
@@ -31,28 +27,37 @@ const Show = (props) => {
         props.history.push("/")
     };
 
+    const handleClick = (event) => {
+        setBigImage(event.target.src)
+    }
+
     return (
         <div 
             className="showArtist"
             style={{ backgroundImage: `url(${backgroundImageShow})`}}
         >
             <h1 className="showArtistInfo">{artist.name}</h1>
-            <img src={artist.image} alt={artist.name} id="mainImage"/>
-            <h3 className="showArtistInfo">{artist.birth}-{artist.death}</h3>
-            <h3 className="showArtistInfo">Movement/Era: {artist.era}</h3>
-            <p className="showArtistInfo">{artist.bio}</p>
+            <img src={bigImage} id="bigImage" alt="bigImage" />
+            <h2 className="showArtistInfo" id="clickImageText">Click an image to view</h2><br />
             <div className="imageDiv">
-                <img src={artist.image1} alt={artist.image2.default} id="bodyImages"/>
-                <img src={artist.image2} alt={artist.image2.default} id="bodyImages"/>
-                <img src={artist.image3} alt={artist.image3.default} id="bodyImages"/>
-                <img src={artist.image4} alt={artist.image4.default} id="bodyImages"/>
-                <img src={artist.image5} alt={artist.image5.default} id="bodyImages"/>
-                {/* <img src={artist.image6} alt={artist.image6.default} id="bodyImages"/>
-                <img src={artist.image7} alt={artist.image7.default} id="bodyImages"/>
-                <img src={artist.image8} alt={artist.image8.default} id="bodyImages"/>
-                <img src={artist.image9} alt={artist.image9.default} id="bodyImages"/>
-                <img src={artist.image10} alt={artist.image10.default} id="bodyImages"/> */}
+                <img src={artist.image1} alt={artist.image2.default} id="bodyImages" onClick={handleClick}/>
+                <img src={artist.image2} alt={artist.image2.default} id="bodyImages" onClick={handleClick}/>
+                <img src={artist.image3} alt={artist.image3.default} id="bodyImages" onClick={handleClick}/>
+                <img src={artist.image4} alt={artist.image4.default} id="bodyImages"onClick={handleClick}/>
+                <img src={artist.image5} alt={artist.image5.default} id="bodyImages"onClick={handleClick}/>
+                {/* <img src={artist.image6} alt={artist.image6.default} id="bodyImages"onClick={handleClick}/>
+                <img src={artist.image7} alt={artist.image7.default} id="bodyImages"onClick={handleClick}/>
+                <img src={artist.image8} alt={artist.image8.default} id="bodyImages"onClick={handleClick}/>
+                <img src={artist.image9} alt={artist.image9.default} id="bodyImages"onClick={handleClick}/>
+                <img src={artist.image10} alt={artist.image10.default} id="bodyImages"onClick={handleClick}/> */}
             </div>
+            <div className="flexArtistInfo">
+                <img src={artist.image} alt={artist.name} id="mainImage"/>
+                <h1 id="artistGridColumn" className="showArtistInfo">Artist Information</h1>
+                <h3 id="artistGridColumn" className="showArtistInfo">{artist.birth}-{artist.death}</h3>
+                <h3 id="artistGridColumn" className="showArtistInfo">Movement/Era: {artist.era}</h3>
+                <p id="artistGridColumn" className="showArtistInfo">{artist.bio}</p>
+            </div> 
             <form onSubmit={handleSubmit}>
                 <div id="editForm">
                     <h2 className="showArtistInfo">EDIT THIS ARTIST</h2>
@@ -162,12 +167,13 @@ const Show = (props) => {
                         placeholder="Add an image of their work."
                         onChange={handleChange}
                     />
-                    <input type="submit" value="Update Artist" id="updateButton"/>
+                    <input className="editButtons" type="submit" value="UPDATE ARTIST" id="updateButton"/>
+                <button className="editButtons" id="deleteButton" onClick={removeArtist}>
+                    DELETE
+                </button>
                 </div>
             </form>
-            <button id="delete" onClick={removeArtist}>
-                DELETE
-            </button>
+            
         </div>
     )
 };

@@ -39,6 +39,10 @@ body {
       border-radius: 10px;
     }
   }
+  #addArtist {
+    position: absolute;
+    right: 20px;
+  }
 }
 
 .artist {
@@ -50,14 +54,19 @@ body {
 
 #mainImage {
   width: 400px;
+  height: 500px;
+  object-fit:cover;
 }
 
 .imageDiv {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  bottom: 50px;
   #bodyImages {
   width: 200px;
+  object-fit:cover;
   }
 }
 
@@ -67,7 +76,9 @@ body {
   flex-direction: column;
   padding-left: 20px;
   text-align: left;
-
+  #bigImage {
+    padding-right: 20px;
+  }
 }
 
 .indexImage {
@@ -126,10 +137,12 @@ body {
 }
 
 .showArtistInfo {
+  display: flex;
   background-color: rgba(255, 255, 255, .9);
   padding: 10px;
   width: fit-content;
-  border-radius: 0 0 20px 0; 
+  height: fit-content;
+  margin-right: 20px;
 }
 
 #editForm {
@@ -163,5 +176,35 @@ body {
   margin-bottom: -10px;
   border-radius: 0;
 }
+
+#clickImageText {
+  position: relative;
+  bottom: 68px;
+  border-radius: 0 15px 0 0;
+}
+
+.editButtons {
+  @include white-text-blue-bg;
+  position: relative;
+  left: 10px;
+  display: flexbox;
+  width: 200px;
+  margin-top: 10px;
+  height: 40px;
+  border-color: $contrastColor;
+
+}
+#deleteButton {
+  &:hover {
+    background-color: red;
+    color: white;
+  }
+}
+#updateButton {
+  &:hover {
+    background-color: green;}
+    color: white;
+}
+
 
 
