@@ -1,5 +1,5 @@
 import { useState } from "react";
-import backgroundImageShow from '../assets/image5.jpeg'
+import backgroundImageShow from '../assets/image11.jpeg'
 
 const Show = (props) => {
 
