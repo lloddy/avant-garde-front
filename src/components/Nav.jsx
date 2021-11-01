@@ -24,8 +24,8 @@ const Nav = (props) => {
                 {
                     props.user ?
                     <>
-                        
-                        <p className="userName">Welcome, {props.user.displayName}</p>
+                        <h1 onClick={logOut} className="logButtons">Logout</h1>
+                        <p className="userName" id="displayName">Welcome, {props.user.displayName}</p>
                         <p>
                             <img src={props.user.photoURL} 
                             alt={props.user.displayName} 
@@ -34,7 +34,7 @@ const Nav = (props) => {
                             />
                         </p>
                         <div className="backGroundBox"></div>
-                        <h1 onClick={logOut} className="logButtons">Logout</h1>
+                        
                     </>
                     :
                     <Link to="/login">

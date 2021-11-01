@@ -40,14 +40,14 @@ body {
   font-family: $mainFont;
   display: flex;
   text-decoration: none;
-
+  justify-content: space-evenly;
   position: -webkit-sticky;
+  gap: 30px;
   position: sticky;
   top: 0;
-  gap: 20px;
   z-index: 10;
   h1 {
-    margin-left: 80px;
+    padding-left: 30px;
     color: $contrastColor;
     font-size: 1.5rem;
     &:hover {
@@ -57,36 +57,33 @@ body {
   }
 }
 
-.backGroundBox {
-  background-color: $mainColor;
-  width: 180px;
-  height: 90px;
-  position: absolute;
-  right: 0;
-  top: 60px;
-  z-index: -10;
-  border-radius: 0 0 0 40px;
+#displayName {
+  margin-left: auto;
 }
 
-.logButtons {
-  align-content: flex-end;
-}
+// .backGroundBox {
+//   background-color: $mainColor;
+//   width: 180px;
+//   height: 90px;
+//   position: absolute;
+//   right: 0;
+//   top: 60px;
+//   z-index: -10;
+//   border-radius: 0 0 0 40px;
+// }
 
  .userName {
-  display: block;
   max-width: 60px;
-  position: absolute;
-  right: 100px;
-  top: 70px;
+  // top: 70px;
   color: $contrastColor;
   text-align: right;
 }
 
 #userPhoto {
-    position: absolute;
+    // position: absolute;
     border-radius: 50%;;
-    top: 80px;
-    right: 20px;
+    // top: 80px;
+    // right: 20px;
   }
 
 .artist {
