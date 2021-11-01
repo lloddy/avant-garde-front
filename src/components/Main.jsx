@@ -3,6 +3,7 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import Index from "../pages/Index"
 import Show from "../pages/Show"
 import Create from "../pages/Create"
+import Login from "../pages/Login"
 
 const Main = (props) => {
     const [ artists, setArtists ] = useState([])
@@ -68,6 +69,9 @@ const Main = (props) => {
                     path="/create"
                     >
                     <Create createArtists={createArtists}/>   
+                </Route>
+                <Route path="/login">
+                    <Login />
                 </Route>
             </Switch>
         </main>

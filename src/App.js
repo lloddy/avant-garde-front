@@ -16,6 +16,7 @@ function App() {
     <div className="App">
       <Nav />
       <Main />
+      <Footer />
     </div>
   );
 }

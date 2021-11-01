@@ -9,6 +9,9 @@ const Nav = (props) => {
             <Link to="/create">
                 <h1 id="addArtist">Add an Artist</h1>
             </Link>
+            <Link to="/login">
+                <h1>Login</h1>
+            </Link>
         </nav>
     )
 }

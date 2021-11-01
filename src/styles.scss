@@ -39,10 +39,6 @@ body {
       border-radius: 10px;
     }
   }
-  #addArtist {
-    position: absolute;
-    right: 20px;
-  }
 }
 
 .artist {
@@ -206,5 +202,10 @@ body {
     color: white;
 }
 
-
+.footer {
+  @include white-text-blue-bg;
+  font-family: $mainFont;
+  display: flex;
+  text-decoration: none;
+}
 
