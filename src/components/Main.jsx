@@ -4,8 +4,25 @@ import Index from "../pages/Index"
 import Show from "../pages/Show"
 import Create from "../pages/Create"
 import Login from "../pages/Login"
+import { auth } from "../services/firebase";
 
 const Main = (props) => {
+
+    const [ user, setUser ] = useState(null);
+
+    useEffect(() => {
+        const unsubscribe = auth.onAuthStateChanged(user => setUser(user));  
+        return () => unsubscribe();
+    }, []);
+
+    // const ProtectedRoute = ({}) => {
+    //     if(props.user) {
+    //       return  props.component
+    //     } else {
+    //       return <Redirect to="/login" />
+    //     }
+    //   }
+
     const [ artists, setArtists ] = useState([])
 
     const URL = 'http://localhost:3001/artists/'
@@ -66,9 +83,10 @@ const Main = (props) => {
                     )}
                 />
                 <Route 
-                    path="/create"
-                    >
-                    <Create createArtists={createArtists}/>   
+                    path="/create" render={() => (
+                        user ? <Create createArtists={createArtists}/> : <Redirect to="/login" />
+                        
+                    )}>
                 </Route>
                 <Route path="/login">
                     <Login />

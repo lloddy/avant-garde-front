@@ -1,7 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import backgroundImageShow from '../assets/image11.jpeg'
+import { auth } from '../services/firebase';
 
 const Show = (props) => {
+
+    const [ user, setUser ] = useState(null);
+
+    useEffect(() => {
+        const unsubscribe = auth.onAuthStateChanged(user => setUser(user));  
+        return () => unsubscribe();
+    }, []);
 
     const id = props.match.params.id;
     const artists = props.artists;
@@ -58,6 +66,7 @@ const Show = (props) => {
                 <h3 id="artistGridColumn" className="showArtistInfo">Movement/Era: {artist.era}</h3>
                 <p id="artistGridColumn" className="showArtistInfo">{artist.bio}</p>
             </div> 
+            
             <form onSubmit={handleSubmit}>
                 <div id="editForm">
                     <h2 className="showArtistInfo">EDIT THIS ARTIST</h2>
