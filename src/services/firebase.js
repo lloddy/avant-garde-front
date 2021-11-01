@@ -13,10 +13,10 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 const auth = firebase.auth();
-const provider = new GoogleAuthProvider();
+const provider = new firebase.auth.GoogleAuthProvider();
 
 function signIn() {
-    return signInWithPopup(auth, provider);
+    return auth.signInWithPopup(provider);
 };
 
 function logOut() {
