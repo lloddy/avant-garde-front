@@ -21,21 +21,27 @@ const Nav = (props) => {
             <Link to="/create" >
                 <h1 id="addArtist">Add an Artist</h1>
             </Link>
-            {
-                props.user ?
-                <>
-                    <p>Welcome, {props.user.displayName}</p>
-                    <p>
-                        <img src={props.user.photoURL} 
-                        alt={props.user.displayName} />
-                    </p>
-                    <h1 onClick={logOut}>Logout</h1>
-                </>
-                :
-                <Link to="/login">
-                    <h1>Login</h1>
-                </Link>
-            } 
+                {
+                    props.user ?
+                    <>
+                        
+                        <p className="userName">Welcome, {props.user.displayName}</p>
+                        <p>
+                            <img src={props.user.photoURL} 
+                            alt={props.user.displayName} 
+                            className="userName"
+                            id="userPhoto"
+                            />
+                        </p>
+                        <div className="backGroundBox"></div>
+                        <h1 onClick={logOut} className="logButtons">Logout</h1>
+                    </>
+                    :
+                    <Link to="/login">
+                        <h1 className="logButtons" >Login</h1>
+                    </Link>
+                } 
+            
         </nav>
     )
 }

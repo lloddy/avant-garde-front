@@ -21,17 +21,33 @@ body {
   background-color: $contrastColor;
 }
 
+.loginPage {
+  font-family: $mainFont;
+  #loginPageButton {
+    width: 300px;
+    height: 50px;
+    margin: 40px;
+    border-radius: 15px;
+    font-size: 24px;
+    @include white-text-blue-bg;
+    &:hover {
+      @include blue-text-white-bg;
+    }
+  }
+}
 .nav {
   @include white-text-blue-bg;
   font-family: $mainFont;
   display: flex;
   text-decoration: none;
+
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  gap: 20px;
   z-index: 10;
   h1 {
-    margin-left: 20px;
+    margin-left: 80px;
     color: $contrastColor;
     font-size: 1.5rem;
     &:hover {
@@ -41,10 +57,43 @@ body {
   }
 }
 
+.backGroundBox {
+  background-color: $mainColor;
+  width: 180px;
+  height: 90px;
+  position: absolute;
+  right: 0;
+  top: 60px;
+  z-index: -10;
+  border-radius: 0 0 0 40px;
+}
+
+.logButtons {
+  align-content: flex-end;
+}
+
+ .userName {
+  display: block;
+  max-width: 60px;
+  position: absolute;
+  right: 100px;
+  top: 70px;
+  color: $contrastColor;
+  text-align: right;
+}
+
+#userPhoto {
+    position: absolute;
+    border-radius: 50%;;
+    top: 80px;
+    right: 20px;
+  }
+
 .artist {
+
   display: flex;
   font-family: $mainFont;
-  padding: 40px;
+  padding: 60px 40px 40px 40px;
   flex-wrap: wrap;
 }
 

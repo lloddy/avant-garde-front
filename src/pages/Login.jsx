@@ -3,8 +3,10 @@ import { signIn } from '../services/firebase';
 const Login = (props) => {
     return (
         <main>
-            <h1>Login</h1>
-            <button onClick={signIn}>Sign in with Google</button>
+            <div className="loginPage">
+                <h1>Please Login</h1>
+                <button id="loginPageButton" onClick={signIn}>Sign in with Google</button>
+            </div>
         </main>
     );
 };
