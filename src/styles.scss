@@ -35,17 +35,22 @@ body {
     }
   }
 }
-.nav {
+
+
+.nav, .menuItems{
   @include white-text-blue-bg;
   font-family: $mainFont;
   display: flex;
   text-decoration: none;
+  align-items: center;
   justify-content: space-around;
   position: -webkit-sticky;
   gap: 30px;
   position: sticky;
   top: 0;
   z-index: 10;
+  height: 100px;
+  padding: 20px;
   h1 {
     height: fit-content;
     margin-left: 30px;
@@ -56,14 +61,21 @@ body {
       border-radius: 10px;
     }
   }
+
+}
+
+.logo {
+  width: 300px;
+  padding: 10px;
+  // margin-right: -50px;
 }
 
 #displayName {
   margin-left: auto;
+  max-width: 100px;
 }
 
- .userName {
-
+.userName {
   color: $contrastColor;
   text-align: right;
 }
@@ -74,7 +86,6 @@ body {
 }
 
 .artist {
-
   display: flex;
   font-family: $mainFont;
   padding: 40px;
@@ -95,6 +106,7 @@ body {
   bottom: 50px;
   #bodyImages {
   width: 200px;
+  height: 400px;
   object-fit:cover;
   }
 }
@@ -243,3 +255,65 @@ body {
   justify-content: center;
 }
 
+.navToggleLabel {
+  font-size: 30px;
+  display: none;
+}
+
+#navToggle {
+  display: none;
+}
+.navMenu {
+    display: block;
+  }
+
+.menuItemsHam {
+  display: none;
+  
+}
+@media only screen and (max-width: 700px) {
+
+  .menuItems {
+    display: none;
+
+  }
+
+  .navToggleLabel {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+   #navToggle:checked + .menuItemsHam {
+      display: block;
+      position: absolute;
+      right: 0;
+      padding-right: 30px;
+      background-color: $mainColor;
+      height: 230px;
+      width: 200px;
+      border-radius: 0 0 0 20px;
+    }
+
+  .logo {
+    width: 200px;
+    padding: 0;
+    margin-left: -20px;
+  }
+  .nav {
+    display: block;
+    padding: 20px;
+
+
+  }
+  .indexImage {
+    max-width: 200px;
+  }
+  .artistName {
+    font-size: 18px;
+    padding: 10px
+  }
+  
+}

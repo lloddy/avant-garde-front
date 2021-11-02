@@ -22,8 +22,9 @@ const Index = (props) => {
 
     return (
         <div className="artist"
-            style={{ backgroundImage: `url(${backgroundImageIndex})`}}
-        >
+            style={{
+                backgroundImage: `url(${backgroundImageIndex})`,
+            }}>
             {props.artists ? loaded() : loading()}
         </div>
     )
