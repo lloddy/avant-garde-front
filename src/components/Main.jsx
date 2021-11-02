@@ -88,10 +88,9 @@ const Main = (props) => {
                         
                     )}>
                 </Route>
-                <Route path="/login">
-                    <Login />
-                </Route>
-                
+                <Route path="/login" render={() => (
+                user ? <Redirect to="/" /> : <Login />
+                )} />  
             </Switch>
         </main>
     )

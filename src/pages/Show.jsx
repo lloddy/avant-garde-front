@@ -66,7 +66,7 @@ const Show = (props) => {
                 <h3 id="artistGridColumn" className="showArtistInfo">Movement/Era: {artist.era}</h3>
                 <p id="artistGridColumn" className="showArtistInfo">{artist.bio}</p>
             </div> 
-            
+            { user && 
             <form onSubmit={handleSubmit}>
                 <div id="editForm">
                     <h2 className="showArtistInfo">EDIT THIS ARTIST</h2>
@@ -182,7 +182,7 @@ const Show = (props) => {
                 </button>
                 </div>
             </form>
-            
+            }
         </div>
     )
 };

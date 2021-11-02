@@ -1,6 +1,15 @@
 import { signIn } from '../services/firebase';
+import { useHistory } from 'react-router-dom'
 
 const Login = (props) => {
+
+
+    // const routeChange = () => {
+    //     let path = 'newPath'
+    //     history.push('/')
+    // }
+
+    const history = useHistory();
     return (
         <main>
             <div className="loginPage">

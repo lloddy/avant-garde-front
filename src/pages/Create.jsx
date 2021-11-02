@@ -3,7 +3,6 @@ import { useState } from 'react';
 import backgroundImageCreate from '../assets/image13.jpeg'
 
 
-
 const Create = (props) => {
     const history = useHistory();
     const [ newForm, setNewForm ] = useState({
