@@ -7,6 +7,7 @@ This is a website to view, post, and share your favorite artists. A user, once l
 - Date of birth/death
 - Movement/era they worked in
 - Bio
+
 All these can be edited if the user is logged in. Also, a user can delete artist entries. Non-users can see this info, but can't edit/delete entries. Users can sign-in/sign-up with their Google account.
 
 ## *Technologies Used*
