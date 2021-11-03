@@ -29,10 +29,10 @@ All these can be edited if the user is logged in. Also, a user can delete artist
 ![screentshot 4](src/assets/Screenshot4.png)
 ![screentshot 5](src/assets/Screenshot5.png)
 
-## How to get Started:
+## *How to get Started*
 [Click here launch](https://avantgardeartists.netlify.app/)
 
-## The Backend:
+## *The Backend*
 [Click here for the repo](https://github.com/lloddy/avant-garde-back)
 [Click here for the page](https://avant-garde-backend.herokuapp.com/)
 
