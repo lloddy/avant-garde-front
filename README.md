@@ -22,14 +22,14 @@ All these can be edited if the user is logged in. Also, a user can delete artist
 | Deployed on  Netlify | Deployed on  Heroku |
 
 ## *Screenshots*
-![screentshot 1](/assets/Screenshot1.png)
-![screentshot 2](/assets/Screenshot2.png)
-![screentshot 3](/assets/Screenshot3.png)
-![screentshot 4](/assets/Screenshot4.png)
-![screentshot 5](/assets/Screenshot5.png)
+![screentshot 1](src/assets/Screenshot1.png)
+![screentshot 2](src/assets/Screenshot2.png)
+![screentshot 3](src/assets/Screenshot3.png)
+![screentshot 4](src/assets/Screenshot4.png)
+![screentshot 5](src/assets/Screenshot5.png)
 
 ## How to get Started:
-Click here to visit: (https://avantgardeartists.netlify.app/)
+[Click here to visit](https://avantgardeartists.netlify.app/)
 
 ## *Future Enhancements*
 - Users can only edit the posts they create
