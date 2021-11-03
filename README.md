@@ -1,4 +1,4 @@
-### **Avant-Garde**
+# **Avant-Garde**
 
 This is a website to view, post, and share your favorite artists. A user, once logged in, can create their own artist entry. They can enter a variety of details about their artist, including:
 - Artist name
