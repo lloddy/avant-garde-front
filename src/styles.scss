@@ -140,12 +140,12 @@ body {
 }
 
 .newForm {
-  display: block;
+  display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
+  margin: auto;
   width: 500px;
-  margin-left: auto;
-  margin-right: auto;
   #createInput {
     width: 400px;
     height: 50px;
@@ -169,6 +169,9 @@ body {
   width: 400px;
   height: 50px;
   border: none;
+  padding: 10px;
+  margin-left: auto;
+  margin-bottom: 10px;
   text-decoration: none;
   border-radius: 15px;
   font-size: 24px;
@@ -188,6 +191,7 @@ body {
 
 #editForm {
   margin-top: 50px;
+
   h2 {
     margin-bottom: 30px;
   }
@@ -323,5 +327,28 @@ body {
 
   #bigImage {
     max-width: 400px;
+  }
+
+  .editEntry {
+    max-width: 300px;
+  }
+
+  .editButtons {
+    width: 150px;
+  }
+
+  .newForm {
+    align-items: flex-start;
+    #createInput, #createInputTextArea {
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px; 
+    margin: 10px;
+    }
+  }
+  
+  .submit {
+    width: 200px;
+
   }
 }
