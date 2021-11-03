@@ -33,6 +33,7 @@ All these can be edited if the user is logged in. Also, a user can delete artist
 
 ## *The Backend*
 [Click here for the repo](https://github.com/lloddy/avant-garde-back)
+
 [Click here for the page](https://avant-garde-backend.herokuapp.com/)
 
 ## *Future Enhancements*
