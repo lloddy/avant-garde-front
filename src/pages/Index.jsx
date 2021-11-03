@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import { useState } from 'react';
 import backgroundImageIndex from '../assets/image1.jpeg'
 
 const Index = (props) => {

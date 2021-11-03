@@ -1,4 +1,4 @@
-import { Link, Redirect } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { logOut } from '../services/firebase'
 import { useState, useEffect } from 'react';
 import { auth } from '../services/firebase';
