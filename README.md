@@ -30,7 +30,11 @@ All these can be edited if the user is logged in. Also, a user can delete artist
 ![screentshot 5](src/assets/Screenshot5.png)
 
 ## How to get Started:
-[Click here to visit](https://avantgardeartists.netlify.app/)
+[Click here launch](https://avantgardeartists.netlify.app/)
+
+## The Backend:
+[Click here for the repo](https://github.com/lloddy/avant-garde-back)
+[Click here for the page](https://avant-garde-backend.herokuapp.com/)
 
 ## *Future Enhancements*
 - Users can only edit the posts they create
