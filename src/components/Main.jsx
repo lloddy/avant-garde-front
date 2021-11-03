@@ -25,7 +25,7 @@ const Main = (props) => {
 
     const [ artists, setArtists ] = useState([])
 
-    const URL = 'http://localhost:3001/artists/'
+    const URL = 'https://avant-garde-backend.herokuapp.com/artists/'
 
     const getArtists = async () => {
         const response = await fetch(URL);
