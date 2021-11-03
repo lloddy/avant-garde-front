@@ -5,7 +5,7 @@ import { auth } from '../services/firebase';
 import Logo from '../assets/logo.svg'
 
 const Nav = (props) => {
-
+    // eslint-disable-next-line
     const [ user, setUser ] = useState(null);
 
     useEffect(() => {
