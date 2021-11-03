@@ -36,12 +36,10 @@ body {
   }
 }
 
-
 .nav, .menuItems{
   @include white-text-blue-bg;
   font-family: $mainFont;
   display: flex;
-  text-decoration: none;
   align-items: center;
   justify-content: space-around;
   position: -webkit-sticky;
@@ -61,7 +59,9 @@ body {
       border-radius: 10px;
     }
   }
-
+  a {
+    text-decoration: none;
+  }
 }
 
 .logo {
@@ -302,18 +302,26 @@ body {
     padding: 0;
     margin-left: -20px;
   }
+
   .nav {
     display: block;
     padding: 20px;
-
-
   }
+
   .indexImage {
     max-width: 200px;
   }
+
   .artistName {
     font-size: 18px;
     padding: 10px
   }
-  
+
+  #mainImage {
+    max-width: 300px;
+  }
+
+  #bigImage {
+    max-width: 400px;
+  }
 }
