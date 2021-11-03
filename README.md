@@ -14,12 +14,11 @@ All these can be edited if the user is logged in. Also, a user can delete artist
 |       Front End      |       Back end      |
 |:--------------------:|:-------------------:|
 | - React              | - HTML              |
-| - HTML               | - Css               |
-| - Css                | - JavaScript/jQuery |
-| - Sass               | - Node.js           |
-| - Firebase           | - Express.js/ejs    |
-| - Inkscape           | - Mongoose ODM      |
-|                      | - MongoDB           |
+| - HTML               | - JavaScript/jQuery |
+| - Css                | - Node.js           |
+| - Sass               | - Express.js/ejs    |
+| - Firebase           | - Mongoose ODM      |
+| - Inkscape           | - MongoDB           |
 | Deployed on  Netlify | Deployed on  Heroku |
 
 ## *Screenshots*
